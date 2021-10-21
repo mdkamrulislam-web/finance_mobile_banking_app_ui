@@ -127,7 +127,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             backgroundColor:
                                 MaterialStateProperty.all(Color(0xFFe7f0fd))),
-                        onPressed: () {},
+                        onPressed: () {
+                          setState(() {
+                            print("New Card Added!");
+                          });
+                        },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -345,7 +349,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       onPressed: () {
                         setState(() {
-                          print("pressed");
+                          print("Calendar Opened!");
                         });
                       },
                       child: FaIcon(
@@ -372,7 +376,11 @@ class _MyHomePageState extends State<MyHomePage> {
                           shadowColor: MaterialStateProperty.all(Colors.white),
                           backgroundColor:
                               MaterialStateProperty.all(Color(0xFF0735B3))),
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          print("Continued!");
+                        });
+                      },
                       child: Padding(
                         padding: const EdgeInsets.only(
                             top: 1, bottom: 1, left: 20.0, right: 20.0),
