@@ -7,55 +7,60 @@ class ProfileSettings extends StatelessWidget {
     required this.size,
     required this.Ficon,
     required this.setting,
+    required this.Gicon,
   }) : super(key: key);
 
   final Size size;
-  final FaIcon Ficon;
-  final Icon GIcon;
+  final Ficon;
+  final Gicon;
   final String setting;
 
-  // Icon iconChecker(){
-  //   if(Ficon == null){
-  //     Icon icon = GIcon;
-  //     return icon;
-  //     }
-  //     else if(GIcon == null){
-  //     FaIcon icon = Ficon;
-  //     return icon;
-  //     }
-  // }
+  Widget? iconChecker() {
+    if (Ficon == null) {
+      Icon icon = Gicon;
+      return icon;
+    } else if (Gicon == null) {
+      FaIcon icon = Ficon;
+      return icon;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            shape: BoxShape.circle,
-            boxShadow: [
-              BoxShadow(
-                  blurRadius: 5,
-                  color: Colors.grey,
-                  // spreadRadius: .0,
-                  offset: Offset(0, 2))
-            ],
-          ),
-          child: CircleAvatar(
-            backgroundColor: Colors.white,
-            // child: ,
-            },
-          ),
+    return GestureDetector(
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 0.0, left: 8),
+        child: Row(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                      blurRadius: 5,
+                      color: Colors.grey,
+                      // spreadRadius: .0,
+                      offset: Offset(0, 2))
+                ],
+              ),
+              // ignore: prefer_const_constructors
+              child: CircleAvatar(
+                backgroundColor: Colors.white,
+                child: iconChecker(),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Text(
+                setting,
+                style: TextStyle(
+                    fontWeight: FontWeight.w700, fontSize: 18, letterSpacing: 0.5),
+              ),
+            ),
+          ],
         ),
-        Padding(
-          padding: const EdgeInsets.only(left: 20.0),
-          child: Text(
-            setting,
-            style: TextStyle(
-                fontWeight: FontWeight.w700, fontSize: 18, letterSpacing: 0.5),
-          ),
-        ),
-      ],
+      ),
     );
   }
 }

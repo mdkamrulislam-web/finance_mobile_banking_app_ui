@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dotted_border/dotted_border.dart';
 import 'package:finance_mobile_banking_app_ui/customshapes/card.dart';
 import 'package:finance_mobile_banking_app_ui/customshapes/innercircleobject.dart';
@@ -37,10 +39,13 @@ class _DashboardState extends State<Dashboard> {
 
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    String? buttonName = 'Continue';
     return Scaffold(
+      backgroundColor: Colors.grey.shade200,
+      
       // backgroundColor: Color(0xFFC4C3C8),//#C4C3C8 //FDFDFD
       body: Padding(
-        padding: const EdgeInsets.only(top: 40.0, left: 30, right: 35),
+        padding: const EdgeInsets.only(top: 40, left: 30, right: 35),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -67,7 +72,7 @@ class _DashboardState extends State<Dashboard> {
                 Expanded(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
+                    children: const [
                       Text(
                         "Money Transfer",
                         style: TextStyle(
@@ -141,7 +146,7 @@ class _DashboardState extends State<Dashboard> {
                     ),
                     borderType: BorderType.RRect,
                     radius: Radius.circular(20),
-                    dashPattern: [2, 2, 2, 2, 2, 2],
+                    dashPattern: const [2, 2, 2, 2, 2, 2],
                     color: Color(0xFF5874c3),
                     strokeWidth: 2,
                   ),
@@ -290,7 +295,7 @@ class _DashboardState extends State<Dashboard> {
                   child: Image.asset(
                     "assets/images/image.png",
                     // scale: Me,
-                    scale: MediaQuery.of(context).size.height / 120,
+                    scale: MediaQuery.of(context).size.height / 140,
                   ),
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height / 70),
@@ -303,77 +308,77 @@ class _DashboardState extends State<Dashboard> {
                   "\$50.00",
                   style: TextStyle(fontWeight: FontWeight.w700, fontSize: 30),
                 ),
-                SizedBox(height: MediaQuery.of(context).size.height / 20),
+                SizedBox(height: MediaQuery.of(context).size.height / 30),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  CircleAvatar(
-                    backgroundColor: Color(0xffC4C3C8).withOpacity(1.0),
-                    radius: MediaQuery.of(context).size.width / 20,
-                    child: TextButton(
-                      style: ButtonStyle(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CircleAvatar(
+                  backgroundColor: Color(0xffC4C3C8).withOpacity(1.0),
+                  radius: MediaQuery.of(context).size.width / 20,
+                  child: TextButton(
+                    style: ButtonStyle(
+                      shape:
+                          MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                      ),
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        print("Calendar Opened!");
+                      });
+                    },
+                    child: FaIcon(
+                      FontAwesomeIcons.solidCalendarAlt,
+                      size: MediaQuery.of(context).size.width / 25,
+                      color: Color(0xff656766).withOpacity(1.0),
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                      color: Color(0xFF0735B3),
+                      borderRadius: BorderRadius.circular(27)),
+                  width: size.width / 1.5,
+                  height: size.height / 15,
+                  child: ElevatedButton(
+                    style: ButtonStyle(
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                            borderRadius: BorderRadius.circular(27.0),
                           ),
                         ),
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          print("Calendar Opened!");
-                        });
-                      },
-                      child: FaIcon(
-                        FontAwesomeIcons.solidCalendarAlt,
-                        size: MediaQuery.of(context).size.width / 25,
-                        color: Color(0xff656766).withOpacity(1.0),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Color(0xFF0735B3),
-                        borderRadius: BorderRadius.circular(27)),
-                    width: size.width / 1.5,
-                    height: size.height / 15,
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                          shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(27.0),
-                            ),
-                          ),
-                          shadowColor: MaterialStateProperty.all(Colors.white),
-                          backgroundColor:
-                              MaterialStateProperty.all(Color(0xFF0735B3))),
-                      onPressed: () {
-                        setState(() {
-                          print("Continued!");
-                        });
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                            top: 1, bottom: 1, left: 20.0, right: 20.0),
-                        child: Center(
-                          child: Text(
-                            'CONTINUE',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 14,
-                                color: Colors.white),
-                          ),
+                        shadowColor: MaterialStateProperty.all(Colors.white),
+                        backgroundColor:
+                            MaterialStateProperty.all(Color(0xFF0735B3))),
+                    onPressed: () {
+                      setState(() {
+                        print("Continued!");
+                        Navigator.of(context)
+                            .pushNamed("/GoogleBottomNavBar");
+                        // buttonName = 'Exit';
+                      });
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                          top: 1, bottom: 1, left: 20.0, right: 20.0),
+                      child: Center(
+                        child: Text(
+                          buttonName,
+                          style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 14,
+                              color: Colors.white),
                         ),
                       ),
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
             SizedBox(height: 5),
           ],
