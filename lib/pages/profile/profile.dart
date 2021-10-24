@@ -27,7 +27,8 @@ class _ProfileState extends State<Profile> {
             children: [
               IconButton(
                 icon: Icon(Icons.arrow_back_ios_new_outlined),
-                onPressed: () => Navigator.of(context).pushNamed('/Dashboard'), color: Colors.amber,
+                onPressed: () => Navigator.of(context).pushNamed('/Dashboard'),
+                color: Colors.amber,
               ),
             ],
           ),
@@ -215,19 +216,47 @@ class _ProfileState extends State<Profile> {
                             size: size.width / 25, color: Color(0xFF22b07e)),
                       ),
                     ),
-                    ProfileSettings(
-                      size: size,
-                      Ficon: FaIcon(FontAwesomeIcons.fingerprint,
-                          size: size.width / 25, color: Color(0xFF7953df)),
-                      setting: 'Touch ID',
-                      Gicon: null,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        ProfileSettings(
+                          size: size,
+                          Ficon: FaIcon(FontAwesomeIcons.fingerprint,
+                              size: size.width / 25, color: Color(0xFF7953df)),
+                          setting: 'Touch ID',
+                          Gicon: null,
+                        ),
+                        Switch(
+                          value: true,
+                          onChanged: (value) {
+                            setState(() {
+                              value = false;
+                            });
+                            ;
+                          },
+                        ),
+                      ],
                     ),
-                    ProfileSettings(
-                      size: size,
-                      Ficon: null,
-                      setting: 'Face ID',
-                      Gicon: Icon(Icons.portrait,
-                          size: size.width / 20, color: Color(0xFF32d5d7)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        ProfileSettings(
+                          size: size,
+                          Ficon: null,
+                          setting: 'Face ID',
+                          Gicon: Icon(Icons.portrait,
+                              size: size.width / 20, color: Color(0xFF32d5d7)),
+                        ),
+                        Switch(
+                          value: true,
+                          onChanged: (value) {
+                            setState(() {
+                              value = false;
+                            });
+                            ;
+                          },
+                        ),
+                      ],
                     ),
                     GestureDetector(
                       onTap: () {
