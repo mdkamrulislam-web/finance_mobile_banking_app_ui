@@ -17,23 +17,30 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
       backgroundColor: Colors.grey.shade200,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(50.0),
+        preferredSize: const Size.fromHeight(5),
         child: AppBar(
-          foregroundColor: Colors.white,
           backgroundColor: Colors.grey.shade200,
-          shadowColor: Colors.white,
           elevation: 0,
-          leading: Row(
-            children: [
-              IconButton(
-                icon: Icon(Icons.arrow_back_ios_new_outlined),
-                onPressed: () => Navigator.of(context).pushNamed('/Dashboard'),
-                color: Colors.amber,
-              ),
-            ],
-          ),
         ),
       ),
+      // PreferredSize(
+      //   preferredSize: Size.fromHeight(50.0),
+      //   child: AppBar(
+      //     foregroundColor: Colors.white,
+      //     backgroundColor: Colors.grey.shade200,
+      //     shadowColor: Colors.white,
+      //     elevation: 0,
+      //     leading: Row(
+      //       children: [
+      //         IconButton(
+      //           icon: Icon(Icons.arrow_back_ios_new_outlined),
+      //           onPressed: () => Navigator.of(context).pushNamed('/Dashboard'),
+      //           color: Colors.amber,
+      //         ),
+      //       ],
+      //     ),
+      //   ),
+      // ),
       body: Padding(
         padding: const EdgeInsets.only(top: 0.0, left: 30, right: 35),
         child: Expanded(
@@ -101,14 +108,14 @@ class _ProfileState extends State<Profile> {
                           ),
                           SizedBox(
                               height: MediaQuery.of(context).size.height / 70),
-                          Text(
+                          const Text(
                             "Kamrul Islam",
                             style: TextStyle(
                                 fontWeight: FontWeight.w700, fontSize: 22),
                           ),
                           SizedBox(
                               height: MediaQuery.of(context).size.height / 70),
-                          Text(
+                          const Text(
                             "md.kamrul.islam@g.bracu.ac.bd",
                             style: TextStyle(
                                 fontWeight: FontWeight.w700,
@@ -126,7 +133,7 @@ class _ProfileState extends State<Profile> {
                     right: 20,
                     child: CircleAvatar(
                       radius: MediaQuery.of(context).size.width / 50.0,
-                      backgroundColor: Color(0xFFfe8700),
+                      backgroundColor: const Color(0xFFfe8700),
                     ),
                   ),
                   Positioned(
@@ -135,7 +142,7 @@ class _ProfileState extends State<Profile> {
                     top: 20,
                     child: CircleAvatar(
                       radius: MediaQuery.of(context).size.width / 75.0,
-                      backgroundColor: Color(0xFF0939ba),
+                      backgroundColor: const Color(0xFF0939ba),
                     ),
                   ),
                   Positioned(
@@ -144,7 +151,7 @@ class _ProfileState extends State<Profile> {
                     top: 60,
                     child: CircleAvatar(
                       radius: MediaQuery.of(context).size.width / 60.0,
-                      backgroundColor: Color(0xFFda77ea),
+                      backgroundColor: const Color(0xFFda77ea),
                     ),
                   ),
                   Positioned(
@@ -153,7 +160,7 @@ class _ProfileState extends State<Profile> {
                     right: 80,
                     child: CircleAvatar(
                       radius: MediaQuery.of(context).size.width / 80.0,
-                      backgroundColor: Color(0xFF32d4d7),
+                      backgroundColor: const Color(0xFF32d4d7),
                     ),
                   ),
                   Positioned(
@@ -162,7 +169,7 @@ class _ProfileState extends State<Profile> {
                     right: 10,
                     child: CircleAvatar(
                       radius: MediaQuery.of(context).size.width / 50.0,
-                      backgroundColor: Color(0xFF22b07d),
+                      backgroundColor: const Color(0xFF22b07d),
                     ),
                   ),
                   Positioned(
@@ -171,7 +178,7 @@ class _ProfileState extends State<Profile> {
                     bottom: 105,
                     child: CircleAvatar(
                       radius: MediaQuery.of(context).size.width / 120.0,
-                      backgroundColor: Color(0xFFffbf13),
+                      backgroundColor: const Color(0xFFffbf13),
                     ),
                   ),
                   Positioned(
@@ -179,7 +186,7 @@ class _ProfileState extends State<Profile> {
                     bottom: 100,
                     child: CircleAvatar(
                       radius: MediaQuery.of(context).size.width / 70.0,
-                      backgroundColor: Color(0xFF22b07d),
+                      backgroundColor: const Color(0xFF22b07d),
                     ),
                   ),
                 ],
@@ -197,7 +204,8 @@ class _ProfileState extends State<Profile> {
                       child: ProfileSettings(
                         size: size,
                         Ficon: FaIcon(FontAwesomeIcons.key,
-                            size: size.width / 25, color: Color(0xFFffbf13)),
+                            size: size.width / 25,
+                            color: const Color(0xFFffbf13)),
                         setting: 'Password',
                         Gicon: null,
                       ),
@@ -213,7 +221,8 @@ class _ProfileState extends State<Profile> {
                         Ficon: null,
                         setting: 'Languages',
                         Gicon: Icon(Icons.g_translate,
-                            size: size.width / 25, color: Color(0xFF22b07e)),
+                            size: size.width / 25,
+                            color: const Color(0xFF22b07e)),
                       ),
                     ),
                     Row(
@@ -222,7 +231,8 @@ class _ProfileState extends State<Profile> {
                         ProfileSettings(
                           size: size,
                           Ficon: FaIcon(FontAwesomeIcons.fingerprint,
-                              size: size.width / 25, color: Color(0xFF7953df)),
+                              size: size.width / 25,
+                              color: const Color(0xFF7953df)),
                           setting: 'Touch ID',
                           Gicon: null,
                         ),
@@ -232,7 +242,6 @@ class _ProfileState extends State<Profile> {
                             setState(() {
                               value = false;
                             });
-                            ;
                           },
                         ),
                       ],
@@ -245,7 +254,8 @@ class _ProfileState extends State<Profile> {
                           Ficon: null,
                           setting: 'Face ID',
                           Gicon: Icon(Icons.portrait,
-                              size: size.width / 20, color: Color(0xFF32d5d7)),
+                              size: size.width / 20,
+                              color: const Color(0xFF32d5d7)),
                         ),
                         Switch(
                           value: true,
@@ -253,7 +263,6 @@ class _ProfileState extends State<Profile> {
                             setState(() {
                               value = false;
                             });
-                            ;
                           },
                         ),
                       ],
@@ -269,7 +278,8 @@ class _ProfileState extends State<Profile> {
                         Ficon: null,
                         setting: 'App\nInformation',
                         Gicon: Icon(Icons.info,
-                            size: size.width / 20, color: Color(0xFFfd8700)),
+                            size: size.width / 20,
+                            color: const Color(0xFFfd8700)),
                       ),
                     ),
                     GestureDetector(
@@ -283,10 +293,11 @@ class _ProfileState extends State<Profile> {
                         Ficon: null,
                         setting: 'Customer Care',
                         Gicon: Icon(Icons.headphones,
-                            size: size.width / 20, color: Color(0xFFda77eb)),
+                            size: size.width / 20,
+                            color: const Color(0xFFda77eb)),
                       ),
                     ),
-                    SizedBox(),
+                    const SizedBox(),
                   ],
                 ),
               ),

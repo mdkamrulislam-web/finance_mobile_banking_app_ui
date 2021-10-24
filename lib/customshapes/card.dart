@@ -14,15 +14,15 @@ class RPSCustomPainterCard extends CustomPainter {
     path_0.lineTo(size.width * 0.00009465663, size.height * 0.8797074);
     path_0.close();
 
-    Paint paint_0_fill = Paint()..style = PaintingStyle.fill;
-    paint_0_fill.shader = ui.Gradient.linear(
+    Paint paint0Fill = Paint()..style = PaintingStyle.fill;
+    paint0Fill.shader = ui.Gradient.linear(
         Offset(size.width * -11.82018, size.height * 0.7121588),
         Offset(size.width * 0.3073328, size.height * -14.45774), [
-      Color(0xffF49B4F).withOpacity(1.0),
-      Color(0xffF49C52).withOpacity(1.0),
-      Color(0xffEB9448).withOpacity(0.98),
-      Color(0xffE5863A).withOpacity(0.98),
-      Color(0xffD47128).withOpacity(1.0)
+      const Color(0xffF49B4F).withOpacity(1.0),
+      const Color(0xffF49C52).withOpacity(1.0),
+      const Color(0xffE5863A).withOpacity(0.98),
+      const Color(0xffEB9448).withOpacity(0.98),
+      const Color(0xffD47128).withOpacity(1.0)
     ], [
       0.1447,
       0.3382,
@@ -30,7 +30,7 @@ class RPSCustomPainterCard extends CustomPainter {
       0.7121,
       0.8754
     ]);
-    canvas.drawPath(path_0, paint_0_fill);
+    canvas.drawPath(path_0, paint0Fill);
 
     Path path_1 = Path();
     path_1.moveTo(size.width * 0.01746415, size.height * 0.9658591);
@@ -51,15 +51,15 @@ class RPSCustomPainterCard extends CustomPainter {
     path_1.lineTo(size.width * 0.01746415, size.height * 0.9658591);
     path_1.close();
 
-    Paint paint_1_fill = Paint()..style = PaintingStyle.fill;
-    paint_1_fill.shader = ui.Gradient.linear(
+    Paint paint1Fill = Paint()..style = PaintingStyle.fill;
+    paint1Fill.shader = ui.Gradient.linear(
         Offset(size.width * 0.01825879, size.height * 0.9672132),
         Offset(size.width * 0.01829381, size.height * 0.9671540), [
-      Color(0xffF49B4F).withOpacity(1.0),
-      Color(0xffF49C52).withOpacity(1.0),
-      Color(0xffEB9448).withOpacity(0.98),
-      Color(0xffE5863A).withOpacity(0.98),
-      Color(0xffD47128).withOpacity(1.0)
+      const Color(0xffF49B4F).withOpacity(1.0),
+      const Color(0xffF49C52).withOpacity(1.0),
+      const Color(0xffEB9448).withOpacity(0.98),
+      const Color(0xffE5863A).withOpacity(0.98),
+      const Color(0xffD47128).withOpacity(1.0)
     ], [
       0.1447,
       0.3382,
@@ -67,7 +67,7 @@ class RPSCustomPainterCard extends CustomPainter {
       0.7121,
       0.8754
     ]);
-    canvas.drawPath(path_1, paint_1_fill);
+    canvas.drawPath(path_1, paint1Fill);
 
     Path path_2 = Path();
     path_2.moveTo(size.width * 0.9372427, size.height * 0.0007595746);
@@ -91,19 +91,19 @@ class RPSCustomPainterCard extends CustomPainter {
         size.height * 0.0007595746);
     path_2.close();
 
-    Paint paint_2_fill = Paint()..style = PaintingStyle.fill;
-    paint_2_fill.shader = ui.Gradient.linear(
+    Paint paint2Fill = Paint()..style = PaintingStyle.fill;
+    paint2Fill.shader = ui.Gradient.linear(
         Offset(size.width * 0.5883333, size.height * 1.202829),
         Offset(size.width * 1.092246, size.height * 0.1882926), [
-      Color(0xffE37C26).withOpacity(1.0),
-      Color(0xffDB7727).withOpacity(1.0),
-      Color(0xffD47128).withOpacity(1.0)
+      const Color(0xffE37C26).withOpacity(1.0),
+      const Color(0xffDB7727).withOpacity(1.0),
+      const Color(0xffD47128).withOpacity(1.0)
     ], [
       0.2332,
       0.507,
       0.803
     ]);
-    canvas.drawPath(path_2, paint_2_fill);
+    canvas.drawPath(path_2, paint2Fill);
 
     Path path_3 = Path();
     path_3.moveTo(size.width * 0.4463297, size.height * 1.000280);
@@ -120,15 +120,15 @@ class RPSCustomPainterCard extends CustomPainter {
     path_3.lineTo(size.width * 0.4463297, size.height * 1.000280);
     path_3.close();
 
-    Paint paint_3_fill = Paint()..style = PaintingStyle.fill;
-    paint_3_fill.shader = ui.Gradient.linear(
+    Paint paint3Fill = Paint()..style = PaintingStyle.fill;
+    paint3Fill.shader = ui.Gradient.linear(
         Offset(size.width * 0.007554783, size.height * 0.9443116),
         Offset(size.width * 0.9076255, size.height * -0.5837531), [
-      Color(0xffF29A4D).withOpacity(1.0),
-      Color(0xffE28028).withOpacity(1.0),
-      Color(0xffD9782C).withOpacity(1.0),
-      Color(0xffC96528).withOpacity(0.98),
-      Color(0xffC96528).withOpacity(0.98)
+      const Color(0xffF29A4D).withOpacity(1.0),
+      const Color(0xffE28028).withOpacity(1.0),
+      const Color(0xffD9782C).withOpacity(1.0),
+      const Color(0xffC96528).withOpacity(0.98),
+      const Color(0xffC96528).withOpacity(0.98)
     ], [
       0.1598,
       0.3367,
@@ -136,17 +136,17 @@ class RPSCustomPainterCard extends CustomPainter {
       0.7,
       0.8688
     ]);
-    canvas.drawPath(path_3, paint_3_fill);
+    canvas.drawPath(path_3, paint3Fill);
 
-    Paint paint_4_fill = Paint()..style = PaintingStyle.fill;
-    paint_4_fill.color = Color(0xffF19C50).withOpacity(1.0);
+    Paint paint4Fill = Paint()..style = PaintingStyle.fill;
+    paint4Fill.color = const Color(0xffF19C50).withOpacity(1.0);
     canvas.drawCircle(Offset(size.width * 0.1572957, size.height * 0.1842568),
-        size.width * 0.03663212, paint_4_fill);
+        size.width * 0.03663212, paint4Fill);
 
-    Paint paint_5_fill = Paint()..style = PaintingStyle.fill;
-    paint_5_fill.color = Color(0xffFFFFFF).withOpacity(1.0);
+    Paint paint5Fill = Paint()..style = PaintingStyle.fill;
+    paint5Fill.color = const Color(0xffFFFFFF).withOpacity(1.0);
     canvas.drawCircle(Offset(size.width * 0.1099673, size.height * 0.1842568),
-        size.width * 0.03663212, paint_5_fill);
+        size.width * 0.03663212, paint5Fill);
 
     Path path_6 = Path();
     path_6.moveTo(size.width * 0.8032799, size.height * 1.000440);
@@ -169,14 +169,14 @@ class RPSCustomPainterCard extends CustomPainter {
     path_6.lineTo(size.width * 0.8032799, size.height * 1.000440);
     path_6.close();
 
-    Paint paint_6_fill = Paint()..style = PaintingStyle.fill;
-    paint_6_fill.color = Color(0xffBA5B27).withOpacity(1.0);
-    canvas.drawPath(path_6, paint_6_fill);
+    Paint paint6Fill = Paint()..style = PaintingStyle.fill;
+    paint6Fill.color = const Color(0xffBA5B27).withOpacity(1.0);
+    canvas.drawPath(path_6, paint6Fill);
 
-    Paint paint_7_fill = Paint()..style = PaintingStyle.fill;
-    paint_7_fill.color = Color(0xffCF7128).withOpacity(1.0);
+    Paint paint7Fill = Paint()..style = PaintingStyle.fill;
+    paint7Fill.color = const Color(0xffCF7128).withOpacity(1.0);
     canvas.drawCircle(Offset(size.width * 0.8709593, size.height * 0.8534021),
-        size.width * 0.04590847, paint_7_fill);
+        size.width * 0.04590847, paint7Fill);
 
     Path path_8 = Path();
     path_8.moveTo(size.width * 0.8558143, size.height * 0.8468458);
@@ -230,16 +230,16 @@ class RPSCustomPainterCard extends CustomPainter {
         size.height * 0.8468458);
     path_8.close();
 
-    Paint paint_8_fill = Paint()..style = PaintingStyle.fill;
-    paint_8_fill.color = Color(0xffECE7E7).withOpacity(1.0);
-    canvas.drawPath(path_8, paint_8_fill);
+    Paint paint8Fill = Paint()..style = PaintingStyle.fill;
+    paint8Fill.color = const Color(0xffECE7E7).withOpacity(1.0);
+    canvas.drawPath(path_8, paint8Fill);
 
     Path path_9 = Path();
     path_9.moveTo(size.width * 0.4270671, size.height * 0.001359239);
 
-    Paint paint_9_fill = Paint()..style = PaintingStyle.fill;
-    paint_9_fill.color = Color(0xff000000).withOpacity(1.0);
-    canvas.drawPath(path_9, paint_9_fill);
+    Paint paint9Fill = Paint()..style = PaintingStyle.fill;
+    paint9Fill.color = const Color(0xff000000).withOpacity(1.0);
+    canvas.drawPath(path_9, paint9Fill);
 
     Path path_10 = Path();
     path_10.moveTo(size.width * 0.6107246, size.height * 1.001159);
@@ -261,9 +261,9 @@ class RPSCustomPainterCard extends CustomPainter {
         size.height * 1.001159);
     path_10.close();
 
-    Paint paint_10_fill = Paint()..style = PaintingStyle.fill;
-    paint_10_fill.color = Color(0xffCD6D28).withOpacity(1.0);
-    canvas.drawPath(path_10, paint_10_fill);
+    Paint paint10Fill = Paint()..style = PaintingStyle.fill;
+    paint10Fill.color = const Color(0xffCD6D28).withOpacity(1.0);
+    canvas.drawPath(path_10, paint10Fill);
 
     Path path_11 = Path();
     path_11.moveTo(size.width * 0.4094609, size.height * 0.001359239);
@@ -278,9 +278,9 @@ class RPSCustomPainterCard extends CustomPainter {
     path_11.lineTo(size.width * 0.4094609, size.height * 0.001359239);
     path_11.close();
 
-    Paint paint_11_fill = Paint()..style = PaintingStyle.fill;
-    paint_11_fill.color = Color(0xffED9143).withOpacity(1.0);
-    canvas.drawPath(path_11, paint_11_fill);
+    Paint paint11Fill = Paint()..style = PaintingStyle.fill;
+    paint11Fill.color = const Color(0xffED9143).withOpacity(1.0);
+    canvas.drawPath(path_11, paint11Fill);
 
     Path path_12 = Path();
     path_12.moveTo(size.width * -0.5895688, size.height * 1.565523);
@@ -300,9 +300,9 @@ class RPSCustomPainterCard extends CustomPainter {
         size.height * 1.565523);
     path_12.close();
 
-    Paint paint_12_fill = Paint()..style = PaintingStyle.fill;
-    paint_12_fill.color = Color(0xffC96528).withOpacity(1.0);
-    canvas.drawPath(path_12, paint_12_fill);
+    Paint paint12Fill = Paint()..style = PaintingStyle.fill;
+    paint12Fill.color = const Color(0xffC96528).withOpacity(1.0);
+    canvas.drawPath(path_12, paint12Fill);
   }
 
   @override

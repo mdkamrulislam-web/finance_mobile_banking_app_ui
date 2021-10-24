@@ -5,13 +5,17 @@ class ProfileSettings extends StatelessWidget {
   const ProfileSettings({
     Key? key,
     required this.size,
+    // ignore: non_constant_identifier_names
     required this.Ficon,
     required this.setting,
+    // ignore: non_constant_identifier_names
     required this.Gicon,
   }) : super(key: key);
 
   final Size size;
+  // ignore: non_constant_identifier_names, prefer_typing_uninitialized_variables
   final Ficon;
+  // ignore: non_constant_identifier_names, prefer_typing_uninitialized_variables
   final Gicon;
   final String setting;
 
@@ -33,7 +37,7 @@ class ProfileSettings extends StatelessWidget {
         child: Row(
           children: [
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
                 shape: BoxShape.circle,
                 boxShadow: [
@@ -54,8 +58,10 @@ class ProfileSettings extends StatelessWidget {
               padding: const EdgeInsets.only(left: 20.0),
               child: Text(
                 setting,
-                style: TextStyle(
-                    fontWeight: FontWeight.w700, fontSize: 18, letterSpacing: 0.5),
+                style: const TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 18,
+                    letterSpacing: 0.5),
               ),
             ),
           ],

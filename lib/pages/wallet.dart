@@ -1,4 +1,3 @@
-import 'package:finance_mobile_banking_app_ui/pages/dashboard.dart';
 import 'package:flutter/material.dart';
 
 class Wallet extends StatefulWidget {
@@ -11,11 +10,12 @@ class Wallet extends StatefulWidget {
 class _WalletState extends State<Wallet> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Dashboard(),
-      // Center(
-      //   child: Text("Wallet"),
-      // ),
+    return const Scaffold(
+      body:
+          // Dashboard(),
+          Center(
+        child: Text("Wallet"),
+      ),
     );
   }
 }

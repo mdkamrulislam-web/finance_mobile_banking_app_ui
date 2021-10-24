@@ -4,18 +4,15 @@ import 'package:finance_mobile_banking_app_ui/pages/profile/profile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:line_icons/line_icons.dart';
 import 'pages/dashboard.dart';
 import 'pages/profile/profile.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-
 import 'pages/profile/profile_screens/languages.dart';
 import 'pages/profile/profile_screens/password.dart';
 import 'pages/profile/profile_screens/appinfo.dart';
 import 'pages/profile/profile_screens/customercare.dart';
 import 'pages/stat.dart';
 import 'pages/wallet.dart';
-import 'pages/dashboard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,19 +28,19 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       routes: <String, WidgetBuilder>{
-        '/Dashboard': (BuildContext context) => Dashboard(),
-        '/GoogleBottomNavBar': (BuildContext context) => GoogleBottomNavBar(),
-        
-        
+        '/Dashboard': (BuildContext context) => const Dashboard(),
+        '/GoogleBottomNavBar': (BuildContext context) =>
+            const GoogleBottomNavBar(),
+
         // *Profile Page Routing
-        '/Password': (BuildContext context) => Password(),
-        '/Languages': (BuildContext context) => Languages(),
-        '/AppInfo': (BuildContext context) => AppInfo(),
-        '/CustomerCare': (BuildContext context) => CustomerCare(),
+        '/Password': (BuildContext context) => const Password(),
+        '/Languages': (BuildContext context) => const Languages(),
+        '/AppInfo': (BuildContext context) => const AppInfo(),
+        '/CustomerCare': (BuildContext context) => const CustomerCare(),
       },
       home:
           // GoogleBottomNavBar(),
-          Dashboard(),
+          const Dashboard(),
     );
   }
 }
@@ -56,21 +53,18 @@ class GoogleBottomNavBar extends StatefulWidget {
 }
 
 class _GoogleBottomNavBarState extends State<GoogleBottomNavBar> {
-  @override
   int _selectedIndex = 0;
-  var inactiveColor = Color(0xFF9ba2aa);
-  var activeColor = Color(0xFF0839bc);
+  var inactiveColor = const Color(0xFF9ba2aa);
+  var activeColor = const Color(0xFF0839bc);
+  // ignore: non_constant_identifier_names
   static final List _NavScreens = [
-    Home(),
-    Wallet(),
-    Stats(),
-    Profile(),
-    // Text('Home'),
-    // Text('Wallet'),
-    // Text('Profile'),
-    // Text('Care')
+    const Home(),
+    const Profile(),
+    const Wallet(),
+    const Stats(),
   ];
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
@@ -91,10 +85,14 @@ class _GoogleBottomNavBarState extends State<GoogleBottomNavBar> {
             tabBackgroundColor: Colors.grey.shade200,
             color: inactiveColor,
             // padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-            tabs: [
+            tabs: const [
               GButton(
                 icon: Icons.home,
                 text: 'Home',
+              ),
+              GButton(
+                icon: Icons.person,
+                text: 'Profile',
               ),
               GButton(
                 icon: Icons.account_balance_wallet,
@@ -103,10 +101,6 @@ class _GoogleBottomNavBarState extends State<GoogleBottomNavBar> {
               GButton(
                 icon: FontAwesomeIcons.poll,
                 text: 'Stats',
-              ),
-              GButton(
-                icon: Icons.person,
-                text: 'Profile',
               ),
             ],
             selectedIndex: _selectedIndex,

@@ -43,9 +43,9 @@ class InnerCircleObject extends CustomPainter {
     path_0.lineTo(size.width * 0.9732714, size.height * 0.3829180);
     path_0.close();
 
-    Paint paint_0_fill = Paint()..style = PaintingStyle.fill;
-    paint_0_fill.color = Color(0xff656766).withOpacity(1.0);
-    canvas.drawPath(path_0, paint_0_fill);
+    Paint paint0Fill = Paint()..style = PaintingStyle.fill;
+    paint0Fill.color = const Color(0xff656766).withOpacity(1.0);
+    canvas.drawPath(path_0, paint0Fill);
 
     Path path_1 = Path();
     path_1.moveTo(size.width * 0.4023736, size.height * 0.8737452);
@@ -73,9 +73,9 @@ class InnerCircleObject extends CustomPainter {
     path_1.lineTo(size.width * 0.4023736, size.height * 0.8737452);
     path_1.close();
 
-    Paint paint_1_fill = Paint()..style = PaintingStyle.fill;
-    paint_1_fill.color = Color(0xffC1C1C1).withOpacity(1.0);
-    canvas.drawPath(path_1, paint_1_fill);
+    Paint paint1Fill = Paint()..style = PaintingStyle.fill;
+    paint1Fill.color = const Color(0xffC1C1C1).withOpacity(1.0);
+    canvas.drawPath(path_1, paint1Fill);
   }
 
   @override

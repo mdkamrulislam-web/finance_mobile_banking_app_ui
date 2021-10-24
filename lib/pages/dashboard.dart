@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:dotted_border/dotted_border.dart';
 import 'package:finance_mobile_banking_app_ui/customshapes/card.dart';
 import 'package:finance_mobile_banking_app_ui/customshapes/innercircleobject.dart';
@@ -28,21 +26,22 @@ class _DashboardState extends State<Dashboard> {
     wordSpacing: 2,
     letterSpacing: .5,
     fontWeight: FontWeight.bold,
-    color: Color(0xFFEDEDED).withOpacity(0.75),
+    color: const Color(0xFFEDEDED).withOpacity(0.75),
   );
 
   final customerDetails = TextStyle(
     fontSize: 15,
     fontWeight: FontWeight.bold,
-    color: Color(0xFFEDEDED).withOpacity(1),
+    color: const Color(0xFFEDEDED).withOpacity(1),
   );
 
+  @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     String? buttonName = 'Continue';
     return Scaffold(
       backgroundColor: Colors.grey.shade200,
-      
+
       // backgroundColor: Color(0xFFC4C3C8),//#C4C3C8 //FDFDFD
       body: Padding(
         padding: const EdgeInsets.only(top: 40, left: 30, right: 35),
@@ -52,12 +51,12 @@ class _DashboardState extends State<Dashboard> {
             Row(
               children: [
                 CircleAvatar(
-                  backgroundColor: Color(0xffF6F6F6).withOpacity(1.0),
+                  backgroundColor: const Color(0xffF6F6F6).withOpacity(1.0),
                   radius: size.width / 19,
                   child: Opacity(
                     opacity: 1,
                     child: CircleAvatar(
-                      backgroundColor: Color(0xFFFEFEFE),
+                      backgroundColor: const Color(0xFFFEFEFE),
                       radius: size.width / 21,
                       child: CustomPaint(
                         size: Size(
@@ -92,7 +91,7 @@ class _DashboardState extends State<Dashboard> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   DottedBorder(
-                    child: Container(
+                    child: SizedBox(
                       height: size.height / 20,
                       width: size.width / 1.9,
                       child: ElevatedButton(
@@ -319,8 +318,7 @@ class _DashboardState extends State<Dashboard> {
                   radius: MediaQuery.of(context).size.width / 20,
                   child: TextButton(
                     style: ButtonStyle(
-                      shape:
-                          MaterialStateProperty.all<RoundedRectangleBorder>(
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0),
                         ),
@@ -358,8 +356,7 @@ class _DashboardState extends State<Dashboard> {
                     onPressed: () {
                       setState(() {
                         print("Continued!");
-                        Navigator.of(context)
-                            .pushNamed("/GoogleBottomNavBar");
+                        Navigator.of(context).pushNamed("/GoogleBottomNavBar");
                         // buttonName = 'Exit';
                       });
                     },
